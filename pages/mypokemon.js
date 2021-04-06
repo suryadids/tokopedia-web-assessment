@@ -66,7 +66,7 @@ const MyPokemon = () => {
 
   return (
     <Layout>
-      {myPoke.length > 0 ? (
+      {myPoke ? (
         myPoke.map((poke, ndx) => {
           return (
             <MyPokeList key={ndx}>
