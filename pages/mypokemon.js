@@ -7,7 +7,6 @@ import { useAppContext } from "../lib/appContext";
 
 const MyPokemon = () => {
   const { myPoke, setMyPoke } = useAppContext();
-  console.log(myPoke);
 
   const removePoke = (poke) => {
     const confirmDelete = confirm(
@@ -67,7 +66,7 @@ const MyPokemon = () => {
 
   return (
     <Layout>
-      {myPoke ? (
+      {myPoke.length > 0 ? (
         myPoke.map((poke, ndx) => {
           return (
             <MyPokeList key={ndx}>
